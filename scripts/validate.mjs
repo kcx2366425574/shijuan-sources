@@ -41,14 +41,18 @@ function validateSource(source, file) {
   if (!name) errors.push(`${label}: 缺少 bookSourceName`)
   if (!url) errors.push(`${label}: 缺少 bookSourceUrl`)
   else if (!/^https?:\/\//i.test(url)) errors.push(`${label}: bookSourceUrl 必须是 http(s) 地址`)
-  if (!source.searchUrl) errors.push(`${label}: 缺少 searchUrl`)
-  else if (!source.searchUrl.includes('{{key}}') && !(source.searchBody || '').includes('{{key}}')) {
-    warnings.push(`${label}: searchUrl / searchBody 里没有 {{key}}，请确认是否为固定搜索地址`)
+  const indexed = source.searchMode === 'crawl-index' || !!source.indexPagePattern || !!source.searchIndexUrl
+  if (!source.direct && !source.singleChapter) {
+    if (!indexed && !source.searchUrl) errors.push(`${label}: 缺少 searchUrl（直链源请设置 direct: true，索引源请设置 searchMode: crawl-index）`)
+    else if (!indexed && !source.searchUrl.includes('{{key}}') && !(source.searchBody || '').includes('{{key}}')) {
+      warnings.push(`${label}: searchUrl / searchBody 里没有 {{key}}，请确认是否为固定搜索地址`)
+    }
+    if (!source.ruleSearch || !source.ruleSearch.bookList) errors.push(`${label}: 缺少 ruleSearch.bookList`)
+    if (!source.ruleSearch || !source.ruleSearch.name) warnings.push(`${label}: 缺少 ruleSearch.name`)
+    if (!source.ruleSearch || !source.ruleSearch.bookUrl) warnings.push(`${label}: 缺少 ruleSearch.bookUrl`)
+    if (indexed && !source.indexPagePattern && !source.searchIndexUrl) errors.push(`${label}: 索引源缺少 indexPagePattern 或 searchIndexUrl`)
   }
-  if (!source.ruleSearch || !source.ruleSearch.bookList) errors.push(`${label}: 缺少 ruleSearch.bookList`)
-  if (!source.ruleSearch || !source.ruleSearch.name) warnings.push(`${label}: 缺少 ruleSearch.name`)
-  if (!source.ruleSearch || !source.ruleSearch.bookUrl) warnings.push(`${label}: 缺少 ruleSearch.bookUrl`)
-  if (!source.ruleToc || !source.ruleToc.chapterList) errors.push(`${label}: 缺少 ruleToc.chapterList`)
+  if (!source.singleChapter && (!source.ruleToc || !source.ruleToc.chapterList)) errors.push(`${label}: 缺少 ruleToc.chapterList`)
   if (!source.ruleContent || !source.ruleContent.content) errors.push(`${label}: 缺少 ruleContent.content`)
   if (source.searchMethod && !['GET', 'POST'].includes(String(source.searchMethod).toUpperCase())) {
     errors.push(`${label}: searchMethod 只能是 GET 或 POST`)

@@ -1,0 +1,35 @@
+{
+  "bookSourceName": "古登堡计划",
+  "bookSourceUrl": "https://gutendex.com",
+  "bookSourceGroup": "公版",
+  "bookSourceType": 0,
+  "enabled": true,
+  "charset": "utf-8",
+  "searchUrl": "/books/?search={{key}}",
+  "searchMethod": "GET",
+  "searchBody": "",
+  "searchCharset": "utf-8",
+  "ruleSearch": {
+    "bookList": "$.results[*]",
+    "name": "$.title",
+    "author": "$.authors[0].name",
+    "bookUrl": "$.formats[\"text/plain; charset=utf-8\"] || $.formats[\"text/plain\"] || $.formats[\"text/html\"]",
+    "coverUrl": "$.formats[\"image/jpeg\"]",
+    "intro": "$.subjects[0]",
+    "kind": "$.bookshelves[0] || $.languages[0]"
+  },
+  "ruleBookInfo": {},
+  "ruleToc": {},
+  "ruleContent": {
+    "content": "@text"
+  },
+  "replaceRules": [],
+  "tocReverse": false,
+  "singleChapter": true,
+  "direct": false,
+  "followAnyContentPage": false,
+  "type": "json",
+  "id": "builtin-gutenberg",
+  "version": 1,
+  "description": "Project Gutenberg 公版书，通过 Gutendex JSON API 搜索，正文为 TXT 全文。"
+}

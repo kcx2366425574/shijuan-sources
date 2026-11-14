@@ -1,8 +1,8 @@
 {
   "name": "拾卷书源库",
-  "version": 1,
+  "version": 3,
   "engine": 1,
-  "updatedAt": "2026-11-14T17:12:48.011Z",
+  "updatedAt": "2026-11-14T17:32:25.856Z",
   "sources": [
     {
       "id": "builtin-85zw",
@@ -17,6 +17,22 @@
       "path": "sources/quanben.json",
       "version": 1,
       "enabledByDefault": true
+    },
+    {
+      "id": "builtin-gutenberg",
+      "path": "sources/gutenberg.json",
+      "name": "古登堡计划",
+      "version": 1,
+      "enabledByDefault": true,
+      "direct": false
+    },
+    {
+      "id": "builtin-yoboi",
+      "path": "sources/yoboi.json",
+      "name": "笔趣阁分类索引",
+      "version": 2,
+      "enabledByDefault": true,
+      "direct": false
     }
   ]
 }

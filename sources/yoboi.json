@@ -1,0 +1,61 @@
+{
+  "bookSourceName": "笔趣阁分类索引",
+  "bookSourceUrl": "https://www.yoboi.com",
+  "bookSourceGroup": "小说",
+  "bookSourceType": 0,
+  "enabled": true,
+  "charset": "utf-8",
+  "searchUrl": "",
+  "searchMethod": "GET",
+  "searchBody": "",
+  "searchCharset": "utf-8",
+  "ruleSearch": {
+    "bookList": "a[href^=\"/xiaoshuo/\"]",
+    "name": "@text",
+    "bookUrl": "@href"
+  },
+  "ruleBookInfo": {
+    "name": "meta[property=\"og:novel:book_name\"]@content##在线阅读$##",
+    "author": "meta[property=\"og:novel:author\"]@content",
+    "coverUrl": "meta[property=\"og:image\"]@content",
+    "intro": "meta[property=\"og:description\"]@content",
+    "kind": "meta[property=\"og:novel:category\"]@content",
+    "status": "meta[property=\"og:novel:status\"]@content",
+    "lastChapter": "meta[property=\"og:novel:latest_chapter_name\"]@content"
+  },
+  "ruleToc": {
+    "chapterList": "div.info-chapters a",
+    "chapterName": "@text",
+    "chapterUrl": "@href"
+  },
+  "ruleContent": {
+    "title": ".reader-main h1##\\s*（\\d+ / \\d+）$##",
+    "content": "article#article",
+    "nextContentUrl": "#next_url@href"
+  },
+  "replaceRules": [],
+  "tocReverse": false,
+  "singleChapter": false,
+  "direct": false,
+  "searchMode": "crawl-index",
+  "indexPagePattern": "/sort/{category}/{page}/",
+  "indexCategories": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "indexPageLimit": 8,
+  "indexBookUrlPattern": "/xiaoshuo/\\d+\\.html$",
+  "followAnyContentPage": false,
+  "type": "html",
+  "id": "builtin-yoboi",
+  "version": 2,
+  "description": "站点关闭了站内搜索，通过分类目录建立书名索引；支持任意收录书籍的搜索与正文分页。"
+}
