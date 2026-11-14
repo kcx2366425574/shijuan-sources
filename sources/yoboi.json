@@ -57,5 +57,5 @@
   "type": "html",
   "id": "builtin-yoboi",
   "version": 2,
-  "description": "站点关闭了站内搜索，通过分类目录建立书名索引；支持任意收录书籍的搜索与正文分页。"
+  "description": "收录较多，首次搜索稍慢，适合备用。"
 }

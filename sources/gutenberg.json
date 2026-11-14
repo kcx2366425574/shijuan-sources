@@ -31,5 +31,5 @@
   "type": "json",
   "id": "builtin-gutenberg",
   "version": 1,
-  "description": "Project Gutenberg 公版书，通过 Gutendex JSON API 搜索，正文为 TXT 全文。"
+  "description": "公版经典与英文原著，通过古登堡计划搜索，单本全文阅读。"
 }

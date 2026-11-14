@@ -95,6 +95,7 @@ App 在 12 小时内最多检查一次清单；需要立即生效时，在书源
 | 字段 | 说明 |
 | --- | --- |
 | `id` | 稳定 ID，建议与 `index.json` 条目一致。App 同步时按 ID 更新。 |
+| `description` | 面向读者的一句话说明，App 书源页直接展示。 |
 | `charset` | 页面编码。`auto` 会自动识别；GBK 站点可写 `gbk`。 |
 | `searchUrl` | 搜索地址，`{{key}}` 会按 `searchCharset` 编码。 |
 | `searchMethod` / `searchBody` | POST 搜索时使用；body 同样支持 `{{key}}`。 |

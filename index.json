@@ -1,8 +1,8 @@
 {
   "name": "拾卷书源库",
-  "version": 4,
+  "version": 5,
   "engine": 1,
-  "updatedAt": "2026-11-14T17:35:05.918Z",
+  "updatedAt": "2026-11-14T17:56:49.678522+00:00",
   "sources": [
     {
       "id": "builtin-85zw",
