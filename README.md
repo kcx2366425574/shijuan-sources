@@ -32,6 +32,10 @@ VITE_SOURCE_REPO_BRANCH=main
 
 App 启动后会静默检查清单版本；版本变化时拉取书源并更新本地规则。也可在书源页手动「同步」。
 
+解析策略（不同站点如何区分）见 [docs/PARSING.md](docs/PARSING.md)。
+
+解析策略（不同站点如何区分）见 [docs/PARSING.md](docs/PARSING.md)。
+
 ## 发布更新
 
 1. 修改 `sources/*.json`。
