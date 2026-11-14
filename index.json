@@ -1,0 +1,22 @@
+{
+  "name": "拾卷书源库",
+  "version": 1,
+  "engine": 1,
+  "updatedAt": "2026-11-14T17:12:48.011Z",
+  "sources": [
+    {
+      "id": "builtin-85zw",
+      "name": "八五中文网",
+      "path": "sources/85zw.json",
+      "version": 1,
+      "enabledByDefault": true
+    },
+    {
+      "id": "builtin-quanben",
+      "name": "全本小说网",
+      "path": "sources/quanben.json",
+      "version": 1,
+      "enabledByDefault": true
+    }
+  ]
+}

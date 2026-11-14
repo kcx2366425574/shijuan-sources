@@ -1,0 +1,46 @@
+{
+  "bookSourceName": "全本小说网",
+  "bookSourceUrl": "https://www.quanben.io",
+  "bookSourceGroup": "小说",
+  "bookSourceType": 0,
+  "enabled": true,
+  "charset": "utf-8",
+  "searchUrl": "/index.php?c=book&a=search&keywords={{key}}",
+  "searchMethod": "GET",
+  "searchBody": "",
+  "searchCharset": "utf-8",
+  "ruleSearch": {
+    "bookList": ".box .list2",
+    "name": "h3 a",
+    "author": "p span[itemprop=\"author\"]",
+    "bookUrl": "h3 a@href",
+    "coverUrl": "img@src",
+    "intro": "p[itemprop=\"description\"]",
+    "kind": "p span[itemprop=\"category\"]"
+  },
+  "ruleBookInfo": {
+    "name": "h3 span[itemprop=\"name\"]",
+    "author": ".list2 p span[itemprop=\"author\"]",
+    "coverUrl": ".list2 img@src",
+    "intro": ".description",
+    "kind": ".list2 p span[itemprop=\"category\"]",
+    "status": ".list2 p:last-child span",
+    "tocUrl": "a[href$=\"list.html\"]@href##^/n/([^/]+)/list\\.html$##https://www.quanben.io/amp/n/$1/list.html##"
+  },
+  "ruleToc": {
+    "chapterList": ".list3 li",
+    "chapterName": "a span || a",
+    "chapterUrl": "a@href"
+  },
+  "ruleContent": {
+    "title": "h1",
+    "content": ".articlebody || #content"
+  },
+  "replaceRules": [],
+  "tocReverse": false,
+  "singleChapter": false,
+  "type": "html",
+  "id": "builtin-quanben",
+  "version": 1,
+  "description": "UTF-8 站点，使用 AMP 目录获取完整章节。"
+}

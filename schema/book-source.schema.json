@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/shijuan/book-source.schema.json",
+  "title": "拾卷书源",
+  "type": "object",
+  "required": ["bookSourceName", "bookSourceUrl", "searchUrl", "ruleSearch", "ruleToc", "ruleContent"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "稳定 ID，建议与 index.json 条目一致"
+    },
+    "version": {
+      "type": "number",
+      "description": "书源说明版本，仅作参考"
+    },
+    "bookSourceName": { "type": "string", "minLength": 1 },
+    "bookSourceUrl": { "type": "string", "pattern": "^https?://" },
+    "bookSourceGroup": { "type": "string" },
+    "bookSourceType": { "type": "number", "const": 0 },
+    "charset": { "type": "string" },
+    "searchCharset": { "type": "string" },
+    "searchUrl": { "type": "string", "minLength": 1 },
+    "searchMethod": { "type": "string", "enum": ["GET", "POST"] },
+    "searchBody": { "type": "string" },
+    "type": { "type": "string", "enum": ["html", "json"] },
+    "ruleSearch": {
+      "type": "object",
+      "required": ["bookList", "name", "bookUrl"],
+      "properties": {
+        "bookList": { "type": "string" },
+        "name": { "type": "string" },
+        "author": { "type": "string" },
+        "bookUrl": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "intro": { "type": "string" },
+        "kind": { "type": "string" },
+        "lastChapter": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "ruleBookInfo": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "author": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "intro": { "type": "string" },
+        "kind": { "type": "string" },
+        "status": { "type": "string" },
+        "lastChapter": { "type": "string" },
+        "tocUrl": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "ruleToc": {
+      "type": "object",
+      "required": ["chapterList", "chapterName", "chapterUrl"],
+      "properties": {
+        "chapterList": { "type": "string" },
+        "chapterName": { "type": "string" },
+        "chapterUrl": { "type": "string" },
+        "reverse": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "ruleContent": {
+      "type": "object",
+      "required": ["content"],
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "nextContentUrl": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "replaceRules": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tocReverse": { "type": "boolean" },
+    "singleChapter": { "type": "boolean" }
+  },
+  "additionalProperties": true
+}

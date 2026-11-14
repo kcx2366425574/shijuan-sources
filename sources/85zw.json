@@ -1,0 +1,47 @@
+{
+  "bookSourceName": "八五中文网",
+  "bookSourceUrl": "https://www.85zw.com",
+  "bookSourceGroup": "小说",
+  "bookSourceType": 0,
+  "enabled": true,
+  "charset": "gbk",
+  "searchUrl": "/s.php?ie=gbk&q={{key}}",
+  "searchMethod": "GET",
+  "searchBody": "",
+  "searchCharset": "gbk",
+  "ruleSearch": {
+    "bookList": ".bookbox",
+    "name": "h4.bookname a",
+    "author": ".author",
+    "bookUrl": "h4.bookname a@href",
+    "coverUrl": ".bookimg img@src",
+    "intro": ".bookinfo p",
+    "kind": ".cat",
+    "lastChapter": ".update a"
+  },
+  "ruleBookInfo": {
+    "name": "h1",
+    "author": "meta[property=\"og:novel:author\"]@content",
+    "coverUrl": "meta[property=\"og:image\"]@content",
+    "intro": "meta[property=\"og:description\"]@content",
+    "kind": "meta[property=\"og:novel:category\"]@content",
+    "status": "meta[property=\"og:novel:status\"]@content",
+    "lastChapter": "meta[property=\"og:novel:latest_chapter_name\"]@content"
+  },
+  "ruleToc": {
+    "chapterList": ".listmain dd",
+    "chapterName": "a",
+    "chapterUrl": "a@href"
+  },
+  "ruleContent": {
+    "title": "h1",
+    "content": "#content"
+  },
+  "replaceRules": [],
+  "tocReverse": false,
+  "singleChapter": false,
+  "type": "html",
+  "id": "builtin-85zw",
+  "version": 1,
+  "description": "GBK 站点，搜索、完整目录与正文均服务端直出。"
+}
