@@ -1,0 +1,50 @@
+{
+  "bookSourceName": "顶点小说网",
+  "bookSourceUrl": "https://www.biqvge99.cc",
+  "bookSourceGroup": "小说",
+  "bookSourceType": 0,
+  "enabled": true,
+  "charset": "auto",
+  "searchUrl": "/s.php?q={{key}}",
+  "searchMethod": "GET",
+  "searchBody": "",
+  "searchCharset": "utf-8",
+  "ruleSearch": {
+    "bookList": "div.bookbox",
+    "name": "h4.bookname a",
+    "author": "div.author",
+    "bookUrl": "h4.bookname a@href",
+    "coverUrl": "div.bookimg img@src",
+    "intro": "div.bookinfo p",
+    "kind": "div.cat",
+    "lastChapter": "div.update"
+  },
+  "ruleBookInfo": {
+    "name": "h1",
+    "author": "meta[property=\"og:novel:author\"]@content",
+    "coverUrl": "meta[property=\"og:image\"]@content",
+    "intro": ".intro",
+    "kind": "meta[property=\"og:novel:category\"]@content",
+    "status": "meta[property=\"og:novel:status\"]@content",
+    "lastChapter": "meta[property=\"og:novel:latest_chapter_name\"]@content"
+  },
+  "ruleToc": {
+    "chapterList": ".listmain dd",
+    "chapterName": "a",
+    "chapterUrl": "a@href"
+  },
+  "ruleContent": {
+    "title": "h1",
+    "content": "#content"
+  },
+  "replaceRules": [],
+  "tocReverse": false,
+  "singleChapter": false,
+  "direct": false,
+  "searchMode": "",
+  "followAnyContentPage": false,
+  "type": "html",
+  "id": "builtin-biqvge99",
+  "version": 1,
+  "description": "顶点小说网：搜索、完整目录与正文均服务端直出。"
+}

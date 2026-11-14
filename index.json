@@ -1,8 +1,8 @@
 {
   "name": "拾卷书源库",
-  "version": 3,
+  "version": 4,
   "engine": 1,
-  "updatedAt": "2026-11-14T17:32:25.856Z",
+  "updatedAt": "2026-11-14T17:35:05.918Z",
   "sources": [
     {
       "id": "builtin-85zw",
@@ -33,6 +33,13 @@
       "version": 2,
       "enabledByDefault": true,
       "direct": false
+    },
+    {
+      "id": "builtin-biqvge99",
+      "name": "顶点小说网",
+      "path": "sources/biqvge99.json",
+      "version": 1,
+      "enabledByDefault": true
     }
   ]
 }
