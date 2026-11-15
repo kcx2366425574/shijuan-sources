@@ -1,0 +1,48 @@
+{
+  "bookSourceName": "书海阁",
+  "bookSourceUrl": "https://book.washai.net",
+  "bookSourceGroup": "小说",
+  "bookSourceType": 0,
+  "enabled": true,
+  "charset": "utf-8",
+  "searchUrl": "/book/bookclass.html?k={{key}}",
+  "searchMethod": "GET",
+  "searchBody": "",
+  "searchCharset": "utf-8",
+  "ruleSearch": {
+    "bookList": "#bookList .classBookCard",
+    "name": ".classBookTitle a",
+    "author": ".classBookAuthor",
+    "bookUrl": ".classBookTitle a@href",
+    "coverUrl": ".classBookCoverLink img@src",
+    "intro": ".classBookDesc",
+    "kind": ".classCoverCat",
+    "lastChapter": ".classBookChapter a"
+  },
+  "ruleBookInfo": {
+    "name": "#bookName",
+    "author": "#bookAuthor",
+    "coverUrl": "meta[property=\"og:image\"]@content",
+    "intro": "#bookDesc",
+    "kind": ".book-cat-badge",
+    "status": "#bookStatus",
+    "lastChapter": "#lastIndexLink",
+    "tocUrl": "#allIndexLink@href"
+  },
+  "ruleToc": {
+    "chapterList": "#bookIndexList li",
+    "chapterName": "a@text##\\s*\\[免费\\]##",
+    "chapterUrl": "a@href",
+    "nextPage": "link[rel=\"next\"]@href",
+    "pageUrl": "https://book.washai.net/book/indexList/{{bookId}}/{{page}}.html",
+    "totalChapters": "#indexTitle",
+    "maxPages": 40
+  },
+  "ruleContent": {
+    "title": "#indexName",
+    "content": "#readPanel .readChapterAppendBody"
+  },
+  "replaceRules": [],
+  "tocReverse": false,
+  "singleChapter": false
+}

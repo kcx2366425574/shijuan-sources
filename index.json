@@ -1,7 +1,7 @@
 {
   "name": "拾卷书源库",
-  "version": 7,
-  "engine": 1,
+  "version": 8,
+  "engine": 2,
   "updatedAt": "2026-11-14T17:56:49.678522+00:00",
   "sources": [
     {
@@ -38,6 +38,13 @@
       "id": "builtin-biqvge99",
       "name": "顶点小说网",
       "path": "sources/biqvge99.json",
+      "version": 1,
+      "enabledByDefault": true
+    },
+    {
+      "id": "builtin-washai",
+      "name": "书海阁",
+      "path": "sources/washai.json",
       "version": 1,
       "enabledByDefault": true
     }
