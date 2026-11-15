@@ -5,9 +5,9 @@
   "bookSourceType": 0,
   "enabled": true,
   "charset": "gbk",
-  "searchUrl": "/s.php?q={{key}}",
-  "searchMethod": "GET",
-  "searchBody": "",
+  "searchUrl": "/s.php?ie=gbk",
+  "searchMethod": "POST",
+  "searchBody": "q={{key}}",
   "searchCharset": "utf-8",
   "ruleSearch": {
     "bookList": ".bookbox",
@@ -42,6 +42,6 @@
   "singleChapter": false,
   "type": "html",
   "id": "builtin-85zw",
-  "version": 1,
+  "version": 3,
   "description": "玄幻、都市等常见小说，目录与正文完整。"
 }
