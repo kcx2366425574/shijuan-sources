@@ -1,6 +1,6 @@
 {
   "name": "拾卷书源库",
-  "version": 5,
+  "version": 6,
   "engine": 1,
   "updatedAt": "2026-11-14T17:56:49.678522+00:00",
   "sources": [
@@ -8,7 +8,7 @@
       "id": "builtin-85zw",
       "name": "八五中文网",
       "path": "sources/85zw.json",
-      "version": 1,
+      "version": 2,
       "enabledByDefault": true
     },
     {

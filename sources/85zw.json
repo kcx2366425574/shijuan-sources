@@ -5,10 +5,10 @@
   "bookSourceType": 0,
   "enabled": true,
   "charset": "gbk",
-  "searchUrl": "/s.php?ie=gbk&q={{key}}",
+  "searchUrl": "/s.php?q={{key}}",
   "searchMethod": "GET",
   "searchBody": "",
-  "searchCharset": "gbk",
+  "searchCharset": "utf-8",
   "ruleSearch": {
     "bookList": ".bookbox",
     "name": "h4.bookname a",
